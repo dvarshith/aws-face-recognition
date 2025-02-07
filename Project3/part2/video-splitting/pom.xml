@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.cse546.project32</groupId>
+  <artifactId>video-splitting</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <properties>
+        <java.version>17</java.version>
+    </properties>
+  <name>video-splitting</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <!-- AWS Lambda Java Core dependency -->
+    <dependency>
+        <groupId>com.amazonaws</groupId>
+        <artifactId>aws-lambda-java-core</artifactId>
+        <version>1.2.3</version>
+    </dependency>
+    <!-- AWS Lambda Java Events -->
+    <dependency>
+        <groupId>com.amazonaws</groupId>
+        <artifactId>aws-lambda-java-events</artifactId>
+        <version>3.14.0</version> <!-- Use the latest stable version -->
+    </dependency>
+    <!-- AWS SDK for S3 -->
+    <dependency>
+        <groupId>software.amazon.awssdk</groupId>
+	    <artifactId>s3</artifactId>
+	    <version>2.29.6</version>
+    </dependency>
+    <dependency>
+	    <groupId>software.amazon.awssdk</groupId>
+	    <artifactId>lambda</artifactId>
+	    <version>2.29.17</version>
+	</dependency>
+    <dependency>
+	    <groupId>com.amazonaws</groupId>
+	    <artifactId>aws-lambda-java-runtime-interface-client</artifactId>
+	    <version>2.6.0</version>
+	</dependency>
+  </dependencies>
+  <build>
+		<plugins>
+			<!-- Maven Shade Plugin -->
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-shade-plugin</artifactId>
+	            <version>3.6.0</version>
+	            <executions>
+	                <execution>
+	                    <phase>package</phase>
+	                    <goals>
+	                        <goal>shade</goal>
+	                    </goals>
+	                    <configuration>
+	                        <createDependencyReducedPom>false</createDependencyReducedPom>
+	                    </configuration>
+	                </execution>
+	            </executions>
+	        </plugin>
+		</plugins>
+	</build>
+</project>

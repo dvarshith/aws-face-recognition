@@ -1,0 +1,7 @@
+torch
+torchvision
+facenet-pytorch
+opencv-python-headless
+Pillow
+imutils
+numpy

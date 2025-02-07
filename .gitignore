@@ -1,0 +1,79 @@
+```gitignore
+# -------------------
+# Maven / Java
+# -------------------
+target/
+*.war
+*.ear
+*.jar
+*.class
+*.log
+*.project
+*.classpath
+*.settings/
+*.iml
+
+# IntelliJ IDE
+.idea/
+*.ipr
+*.iws
+*.bak
+
+# Eclipse IDE
+*.metadata/
+*.prefs
+
+# NetBeans
+nbproject/private/
+
+# VSCode
+.vscode/
+
+# -------------------
+# Python
+# -------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.Python
+env/
+venv/
+venv.bak/
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Poetry
+poetry.lock
+
+# Pipenv
+Pipfile.lock
+
+# -------------------
+# OS / Editor
+# -------------------
+.DS_Store
+Thumbs.db
+
+# -------------------
+# Credentials / Secrets
+# -------------------
+.env
+*.pem
+*.key
+*.crt
+aws-credentials.json
+
+# If you use local AWS CLI credentials:
+# Uncomment if you sometimes keep them in your project folder (not recommended)
+# .aws/
+
+# -------------------
+# Docker
+# -------------------
+*.tar
+*.img
