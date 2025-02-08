@@ -22,11 +22,11 @@ A comprehensive AWS-based face recognition system that demonstrates:
 ## Table of Contents
 
 1. [Overview](#overview)  
-2. [Architecture](#architecture)  
-3. [Prerequisites](#prerequisites)  
-4. [Setup & Installation](#setup--installation)  
-5. [Usage](#usage)  
-6. [Repository Structure](#repository-structure)  
+2. [Repository Structure](#repository-structure)  
+3. [Architecture](#architecture)  
+4. [Prerequisites](#prerequisites)  
+5. [Setup & Installation](#setup--installation)  
+6. [Usage](#usage)  
 7. [Security Considerations](#security-considerations)  
 8. [Possible Improvements](#possible-improvements)  
 9. [License](#license)  
@@ -46,6 +46,28 @@ This repository showcases an **end-to-end face recognition pipeline** using AWS:
 - **Web Tier**: A Spring Boot REST API that interacts with SQS and S3.
 
 Originally developed for a Cloud Computing course, but it’s a solid reference for real-world AWS patterns.
+
+
+
+
+ </br>
+ 
+## Repository Structure
+```
+aws-face-recognition/
+├── Project1/                        # Basic AWS resource management (EC2, S3, SQS)
+├── Project2/                        # IaaS-based face recognition with auto-scaling
+│   ├── src/
+│   ├── pom.xml
+│   └── ...
+├── Project3/                        # PaaS-based (Lambda) video splitting & face recognition
+│   ├── video-splitting/
+│   ├── face-recognition/
+│   └── ...
+├── .gitignore
+├── README.md                        # You're here!
+└── Other scripts/data as needed
+```
 
 
  </br>
@@ -75,11 +97,11 @@ Each part uses AWS components:
 1. **AWS Account**  
    - S3, EC2, Lambda, SQS, IAM permissions.
 2. **Java 17** & **Maven**  
-   - If you’re running the Spring Boot or other Java-based code.
+   - For running Spring Boot or other Java-based code.
 3. **Python 3.8+**  
    - Required for the face-recognition scripts, ffmpeg steps, etc.
-4. **(Optional) Docker**  
-   - If building container images for Lambda.
+4. **Docker**  
+   - For building container images for Lambda.
 
 
 
@@ -134,28 +156,6 @@ Each part uses AWS components:
       inputFile=<image_or_video_file>
       ```
    - The API sends a message to SQS, triggers the app tier, and eventually returns the classification result.
-
-
-
-
- </br>
- 
-## Repository Structure
-```
-aws-face-recognition/
-├── Project1/                        # Basic AWS resource management (EC2, S3, SQS)
-├── Project2/                        # IaaS-based face recognition with auto-scaling
-│   ├── src/
-│   ├── pom.xml
-│   └── ...
-├── Project3/                        # PaaS-based (Lambda) video splitting & face recognition
-│   ├── video-splitting/
-│   ├── face-recognition/
-│   └── ...
-├── .gitignore
-├── README.md                        # You're here!
-└── Other scripts/data as needed
-```
 
 
 
