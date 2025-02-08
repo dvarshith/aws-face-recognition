@@ -97,17 +97,17 @@ Each part uses AWS components:
 2. **Configure AWS Credentials**
    - **Recommended**: Use IAM Roles for EC2 and Lambda so you don’t store keys in code.
    - Or set environment variables locally (for testing):
-   - ```
+     ```
      export AWS_ACCESS_KEY_ID=<YourAccessKey>
      export AWS_SECRET_ACCESS_KEY=<YourSecretKey>
      export AWS_DEFAULT_REGION=us-east-1
      ```
 
 3. **Build the Java Projects**
-   - ```
-     cd Project2
-     mvn clean package
-     ```
+   ```
+   cd Project2
+   mvn clean package
+   ```
 
 4. Deploy the Lambdas
    - For video-splitting and face-recognition (Project 3), either:
@@ -143,17 +143,17 @@ Each part uses AWS components:
 ## Repository Structure
 ```
 aws-face-recognition/
-├── Project1/            # Basic AWS resource management (EC2, S3, SQS)
-├── Project2/            # IaaS-based face recognition with auto-scaling
+├── Project1/                        # Basic AWS resource management (EC2, S3, SQS)
+├── Project2/                        # IaaS-based face recognition with auto-scaling
 │   ├── src/
 │   ├── pom.xml
 │   └── ...
-├── Project3/            # PaaS-based (Lambda) video splitting & face recognition
+├── Project3/                        # PaaS-based (Lambda) video splitting & face recognition
 │   ├── video-splitting/
 │   ├── face-recognition/
 │   └── ...
 ├── .gitignore
-├── README.md            # You're here!
+├── README.md                        # You're here!
 └── Other scripts/data as needed
 ```
 
