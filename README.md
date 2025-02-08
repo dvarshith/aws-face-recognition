@@ -4,6 +4,7 @@
 [![Java 17](https://img.shields.io/badge/Java-17-blue.svg)](https://www.java.com/)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 
+
 A comprehensive AWS-based face recognition system that demonstrates:
 
 - **Video Splitting** with AWS Lambda (using FFmpeg)
@@ -11,9 +12,12 @@ A comprehensive AWS-based face recognition system that demonstrates:
 - **Auto-scaling** on EC2 based on SQS message queue depth
 - **Serverless Pipelines** (S3 triggers, asynchronous Lambda invocations)
 
+
 > **Note**: This project contains subfolders for different parts (Project1, Project2, Project3).
 
+
 ---
+
 
 ## Table of Contents
 
@@ -28,7 +32,9 @@ A comprehensive AWS-based face recognition system that demonstrates:
 9. [License](#license)  
 10. [Contact](#contact)
 
+
 ---
+
 
 ## Overview
 
@@ -41,11 +47,13 @@ This repository showcases an **end-to-end face recognition pipeline** using AWS:
 
 Originally developed for a Cloud Computing course, but it’s a solid reference for real-world AWS patterns.
 
+
 ---
+
 
 ## Architecture
 
-A high-level flow:
+A high-level flow: </br>
 User (video) -> [S3: <ASU_ID>-input] -> [Lambda: video-splitting] -> [S3: <ASU_ID>-stage-1] -> [Lambda: face-recognition] -> [S3: <ASU_ID>-output]
 
 For the IaaS version (Project 2):
@@ -58,7 +66,9 @@ Each part uses AWS components:
 - **Lambda** for serverless tasks (video splitting & face recognition).
 - **IAM** for access control (best done with roles rather than keys in code).
 
+
 ---
+
 
 ## Prerequisites
 
@@ -71,7 +81,9 @@ Each part uses AWS components:
 4. **(Optional) Docker**  
    - If building container images for Lambda.
 
+
 ---
+
 
 ## Setup & Installation
 
@@ -101,7 +113,9 @@ Each part uses AWS components:
      - Upload the JARs to AWS Lambda via console, _or_
      - Build Docker images with their respective Dockerfile and push to ECR, then create Lambdas from those images.
 
+
 ---
+
 
 ## Usage
 1. Upload a Video (PaaS Example)
@@ -119,7 +133,9 @@ Each part uses AWS components:
      '''
    - The API sends a message to SQS, triggers the app tier, and eventually returns the classification result.
 
+
 ---
+
 
 ## Repository Structure
 '''
@@ -138,14 +154,18 @@ aws-face-recognition/
 └── Other scripts/data as needed
 '''
 
+
 ---
+
 
 ## Security Considerations
 - Remove Hardcoded Credentials: Do not store AWS_ACCESS_KEY_ID or AWS_SECRET_ACCESS_KEY in Java/Python files.
 - Use IAM Roles: Prefer instance profiles for EC2, and execution roles for Lambda.
 - .gitignore: Make sure you aren’t committing .pem files, .log files with private data, or large training data sets.
 
+
 ---
+
 
 ## Possible Improvements
 - Add CI/CD (GitHub Actions or Jenkins) for automatic builds and deployments.
@@ -153,12 +173,16 @@ aws-face-recognition/
 - Performance Tuning for your Lambda containers (memory, concurrency).
 - CloudWatch Alarms & Metrics for deeper monitoring of queue length, CPU, memory usage, etc.
 
+
 ---
+
 
 ## License
 This project is licensed under the MIT License. Feel free to replace with a license of your choice or remove if proprietary.
 
+
 ---
+
 
 ## Contact
 Author: Varshith Dupati
