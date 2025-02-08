@@ -29,8 +29,9 @@ A comprehensive AWS-based face recognition system that demonstrates:
 6. [Usage](#usage)  
 7. [Security Considerations](#security-considerations)  
 8. [Possible Improvements](#possible-improvements)  
-9. [License](#license)  
-10. [Contact](#contact)
+9. [Acknowledgments](#acknowledgments)  
+10. [License](#license)  
+11. [Contact](#contact)
 
 
 
@@ -175,6 +176,13 @@ Each part uses AWS components:
 - More Granular IAM Policies to adhere to the principle of least privilege.
 - Performance Tuning for your Lambda containers (memory, concurrency).
 - CloudWatch Alarms & Metrics for deeper monitoring of queue length, CPU, memory usage, etc.
+
+
+
+ </br>
+
+## Acknowledgments
+- Dataset, test cases, etc. provided by Vista Lab from Arizona State University [https://github.com/visa-lab/CSE546-Cloud-Computing/tree/main].
 
 
 
