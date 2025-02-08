@@ -18,6 +18,7 @@ A comprehensive AWS-based face recognition system that demonstrates:
 ---
 
  </br>
+ 
 ## Table of Contents
 
 1. [Overview](#overview)  
