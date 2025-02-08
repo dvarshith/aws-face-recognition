@@ -15,7 +15,7 @@ A comprehensive AWS-based face recognition system that demonstrates:
 
 > **Note**: This project contains subfolders for different parts (Project1, Project2, Project3).
 
----
+
 
  </br>
  
@@ -32,9 +32,10 @@ A comprehensive AWS-based face recognition system that demonstrates:
 9. [License](#license)  
 10. [Contact](#contact)
 
----
+
 
  </br>
+ 
 ## Overview
 
 This repository showcases an **end-to-end face recognition pipeline** using AWS:
@@ -46,10 +47,9 @@ This repository showcases an **end-to-end face recognition pipeline** using AWS:
 
 Originally developed for a Cloud Computing course, but it’s a solid reference for real-world AWS patterns.
 
- </br>
----
 
  </br>
+ 
 ## Architecture
 
 A high-level flow: </br>
@@ -66,9 +66,10 @@ Each part uses AWS components:
 - **IAM** for access control (best done with roles rather than keys in code).
 
 
----
+
 
  </br>
+ 
 ## Prerequisites
 
 1. **AWS Account**  
@@ -81,9 +82,10 @@ Each part uses AWS components:
    - If building container images for Lambda.
 
 
----
+
 
  </br>
+ 
 ## Setup & Installation
 
 1. **Clone this Repository**
@@ -113,9 +115,10 @@ Each part uses AWS components:
      - Build Docker images with their respective Dockerfile and push to ECR, then create Lambdas from those images.
 
 
----
+
 
  </br>
+ 
 ## Usage
 1. Upload a Video (PaaS Example)
    - Upload test_00.mp4 to <ASU_ID>-input.
@@ -133,9 +136,10 @@ Each part uses AWS components:
    - The API sends a message to SQS, triggers the app tier, and eventually returns the classification result.
 
 
----
+
 
  </br>
+ 
 ## Repository Structure
 ```
 aws-face-recognition/
@@ -154,7 +158,7 @@ aws-face-recognition/
 ```
 
 
----
+
  </br>
 
 ## Security Considerations
@@ -163,7 +167,7 @@ aws-face-recognition/
 - .gitignore: Make sure you aren’t committing .pem files, .log files with private data, or large training data sets.
 
 
----
+
  </br>
 
 ## Possible Improvements
@@ -173,14 +177,14 @@ aws-face-recognition/
 - CloudWatch Alarms & Metrics for deeper monitoring of queue length, CPU, memory usage, etc.
 
 
----
+
  </br>
 
 ## License
 This project is released under the `MIT License`. That means you’re free to use, modify, and distribute the code, but you do so at your own risk.
 
 
----
+
  </br>
 
 ## Contact
