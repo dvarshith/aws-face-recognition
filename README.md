@@ -198,4 +198,5 @@ This project is released under the `MIT License`. That means you’re free to us
 ## Contact
 Author: Varshith Dupati </br>
 GitHub: @dvarshith </br>
+Email: dvarshith942@gmail.com </br>
 Issues: Please open an issue on this repo if you have questions or find bugs. </br>
